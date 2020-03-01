@@ -1,0 +1,48 @@
+* {
+	box-sizing: border-box;
+}
+.wrapper {
+	display: flex;
+}
+@media (max-width: 768px) {
+	.wrapper {
+		flex-direction: column;
+	}
+}
+.selectorBox {
+	flex: 1;
+	border: 2px solid black;
+	padding: 20px 0;
+}
+.itemBox {
+	flex: 1;
+	border: 2px solid black;
+	transition: background-color 0.2s;
+}
+.selector {
+	margin: 0;
+	padding: 0 10px;
+	cursor: pointer;
+}
+.selector:hover {
+	background-color: #aaaaaa;
+}
+.block {
+	width: 100px;
+	height: 100px;
+	background-color: #aaaaaa;
+}
+.itemBox * {				
+	border: 2px solid transparent;
+	transition: background-color 0.2s;
+}
+#myForm {
+	background-color: cyan;
+}
+*.marked {
+	background-color: #ffff99 !important;
+	border: 2px solid red !important;
+}
+[type=radio].marked, [type=checkbox].marked {
+	outline: 2px solid red !important;
+}

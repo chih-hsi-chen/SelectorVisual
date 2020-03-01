@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Selector Visualization</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+		<div class="wrapper">
+			<div class="selectorBox">
+				<p class="selector" onclick = "queryElements('h1')">h1</p>
+				<p class="selector" onclick = "queryElements('.intro')">.intro</p>
+				<p class="selector" onclick = "queryElements('#Lastname')">#Lastname</p>
+				<p class="selector" onclick = "queryElements('.intro, #Lastname')">.intro, #Lastname</p>
+				<p class="selector" onclick = "queryElements('p.myFavors')">p.myFavors</p>
+				<p class="selector" onclick = "queryElements('div > p')">div > p</p>
+				<p class="selector" onclick = "queryElements('ul + p')">ul + p</p>
+				<p class="selector" onclick = "queryElements('ul ~ p')">ul ~ p</p>
+				<!-- <p class="selector" onclick = "queryElements('h1:hover')">h1:hover</p> -->
+				<p class="selector" onclick = "queryElements('*')">*</p>
+				<p class="selector" onclick = "queryElements('[id]')">[id]</p>
+				<p class="selector" onclick = "queryElements('[id^=L]')">[id^=L]</p>
+				<p class="selector" onclick = "queryElements('[id$=ess]')">[id$=ess]</p>
+				<p class="selector" onclick = "queryElements('[id|=list]')">[id|=L]</p>
+				<p class="selector" onclick = "queryElements('[title~=beautiful]')">[title~=beautiful]</p>
+				<p class="selector" onclick = "queryElements('p:lang(it)')">p:lang(it)</p>
+				<p class="selector" onclick = "queryElements('p:first-child')">p:first-child</p>
+				<p class="selector" onclick = "queryElements('p:last-child')">p:last-child</p>
+				<p class="selector" onclick = "queryElements('p::first-letter')">p::first-letter</p>
+				<p class="selector" onclick = "queryElements('p:first-of-type')">p:first-of-type</p>
+				<p class="selector" onclick = "queryElements('li:nth-child(1)')">li:nth-child(1)</p>
+				<p class="selector" onclick = "queryElements('li:nth-last-child(2)')">li:nth-last-child(2)</p>
+				<p class="selector" onclick = "queryElements('li:nth-child(even)')">li:nth-child(even)</p>
+				<p class="selector" onclick = "queryElements('li:nth-child(odd)')">li:nth-child(odd)</p>
+				<p class="selector" onclick = "queryElements('li:only-child')">li:only-child</p>
+				<p class="selector" onclick = "queryElements('strong:only-of-type')">strong:only-of-type</p>
+				<p class="selector" onclick = "queryElements('li:not(:first-child)')">li:not(:first-child)</p>
+				<p class="selector" onclick = "queryElements('input:enabled')">input:enabled</p>
+				<p class="selector" onclick = "queryElements('input:disabled')">input:disabled</p>
+				<p class="selector" onclick = "queryElements('input:checked')">input:checked</p>
+				<p class="selector" onclick = "queryElements('input:default')">input:default</p>
+				<p class="selector" onclick = "queryElements(':empty')">:empty</p>
+				<p class="selector" onclick = "queryElements('input:optional')">input:optional</p>
+				<p class="selector" onclick = "queryElements('input:read-only')">input:read-only</p>
+				<p class="selector" onclick = "queryElements('input:read-write')">input:read-write</p>
+				<p class="selector" onclick = "queryElements('input:required')">input:required</p>
+				<p class="selector" onclick = "queryElements(':target')">:target</p>
+				<p class="selector" onclick = "queryElements('input:valid')">input:valid</p>
+				<p class="selector" onclick = "queryElements(':root')">:root</p>
+			</div>
+			<div class="itemBox">
+				<h1>Welcome to my page</h1>
+				<div class = "intro">					
+					<p>My name is Denio<span id="Lastname">Zuck</span></p>
+					<p id="address">My homeland is Taiwan</p>
+					<p>I have learned so much on HTML/CSS/JS</p>
+				</div>
+				<ul id = "list-Skills">
+					<li>HTML5</li>
+					<li>CSS/SASS</li>
+					<li>JS/ReactJS/Vue.js</li>
+					<li>Nodeman</li>
+					<li>NodeJS/NPM/Git</li>
+				</ul>
+				<ul id = "future-Skills">
+					Future Skills
+					<li>AngularJS</li>
+				</ul>
+				<p class = "myFavors">All my skills are good, but really good at ReactJS</p>
+				<p lang="it" title="Hello beautiful world">Kaoshiung</p>
+				<p><strong>Never give up for your dream</strong></p>
+				<form id = "myForm">
+					<div>
+						Name: <input required type="text" name="fullName">
+					</div>
+					<div>
+						Email: <input type="email" name="email" value="example123@test.com">
+					</div>
+					<div>
+						Address: <input readonly type="address" value="address">
+					</div>
+					<div class = "genderOpt">
+						Female: <input checked type="radio" name="gender" value = "female">
+						Male: <input type="radio" name="gender" value = "male">
+						Others: <input type="radio" name="gender" disabled value = "others">
+					</div>
+					<div class = "interestsOpt">
+						Tennis: <input type="checkbox" name="sport" value = "tennis">
+						Basketball: <input type="checkbox" name="sport" value = "basketball">
+						Baseball: <input type="checkbox" name="sport" value = "baseball">
+					</div>
+				</form>
+				<a href="#address">My address</a>
+				<a href="#myForm">My Form</a>
+			</div>
+		</div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src = "./helper.js"></script>
+</html>
+
